@@ -1,15 +1,15 @@
-# <h1><b>QUESTION-ANSWER</b></h1>
+# <h1><b>Question & Answer</b></h1>
 
 Programa de perguntas e respostas estilo yahoo, feito em js utilizando node.js e mysql.
 
 ## <h2><b>Tecnologias</b></h2>
 
 <ul>
-  <li><b>Node.js</b>
-    <li>  express</li>
-  </li>
+  <li><b>Node.js</b></li>
   <li><b>MySql</b></li>
-  <li><b></b></li>
+  <li><b>Express</b></li>
+  <li><b>Nodemon</b></li>
+  <li><b>EJS</b></li>
 </ul>
 
 
