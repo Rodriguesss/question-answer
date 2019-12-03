@@ -6,7 +6,7 @@ Programa de perguntas e respostas estilo yahoo, feito em js utilizando node.js e
 
 <ul>
   <li><b>Node.js</b>
-    <li>teste</li>
+    <li>  express</li>
   </li>
   <li><b>MySql</b></li>
   <li><b></b></li>
