@@ -15,31 +15,15 @@ Programa de perguntas e respostas estilo yahoo, feito em js utilizando node.js e
 
 ### <h2><b>Rodar Projeto</b></h2>
 ### Instale o Node Modules
-Abra o terminal na pasta 'vue_projetoloja' e insira o seguinte comando:
+Abra o terminal na pasta 'question-answer' e insira o seguinte comando:
 ```
 npm install
 ```
 
-### Configurando Postgresql
-Entre na pasta 'ProjetoLoja' e procure o arquivo 'appsettings.Development.json'
-
-![Vue.js](https://cdn.discordapp.com/attachments/545281793889402880/562084361265217537/app.png)
-
-Abra-o e configure seu userid e sua password.
-### Rodando API
-
-Entre com o terminal dentro da pasta 'ProjetoLoja' e utilize os seguintes comando:
+### Rodando o Projeto
+Com o terminal na pasta 'vquestion-answer' e use o comando a baixo:
 ```
-dotnet ef database update
-```
-```
-dotnet watch run
-```
-
-### Rodando Vue
-Abra outro terminal na pasta 'vue_projetoloja' e use o comando a baixo:
-```
-npm run serve
+nodemon index.js
 ```
 
 
