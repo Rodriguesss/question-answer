@@ -2,16 +2,30 @@
 
 Programa de perguntas e respostas ao estilo <b>yahoo! respostas</b>, feito em js utilizando node.js e mysql.
 
-## <h2><b>Tecnologias</b></h2>
+## <h2><b>Linguagens</b></h2>
+
+<ul>
+  <li><b>Javascript</b></li>
+  <li><b>SQL</b></li>
+</ul>
+
+## <h2><b>SGBD</b></h2>
+
+<ul>
+  <li><b>MySql</b></li>
+</ul>
+
+## <h2><b>Frameworks</b></h2>
 
 <ul>
   <li><b>Node.js</b></li>
-  <li><b>MySql</b></li>
-  <li><b>Express</b></li>
-  <li><b>Nodemon</b></li>
-  <li><b>EJS</b></li>
+  <li>Express</li>
+  <li>Nodemon</li>
+  <li>EJS</li>
+  <li>BodyParser</li>
+  <li>Sequelize</li>
+  <li>MySql2</li>
 </ul>
-
 
 ### <h2><b>Rodar Projeto</b></h2>
 ### Instale o Node Modules
