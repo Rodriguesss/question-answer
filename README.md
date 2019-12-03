@@ -21,7 +21,7 @@ npm install
 ```
 
 ### Rodando o Projeto
-Com o terminal na pasta 'vquestion-answer' e use o comando a baixo:
+Com o terminal na pasta 'question-answer' e use o comando a baixo:
 ```
 nodemon index.js
 ```
