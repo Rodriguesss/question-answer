@@ -1,6 +1,6 @@
 # <h1><b>Question & Answer</b></h1>
 
-Programa de perguntas e respostas ao estilo yahoo, feito em js utilizando node.js e mysql.
+Programa de perguntas e respostas ao estilo <b>yahoo! respostas</b>, feito em js utilizando node.js e mysql.
 
 ## <h2><b>Tecnologias</b></h2>
 
