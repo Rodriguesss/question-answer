@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Página Inicial</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
+<%- include ('partials/header.ejs') %>
 <body>
+  <%- include ('partials/navbar.ejs') %>
   <div class="container">
-
-    <div class="card">
+    <div class="card" id="espaco-topo-margin">
       <div class="card-header">
-          <h3>Realizar pergunta</h3>
-          <hr>
+        <h3>Realizar pergunta</h3>
       </div>
       <div class="card-body">
-        <form>
+        <form method="POST" action="/salvarPergunta">
           <label>Titulo</label>
-          <input type="text" placeholder="Titulo" class="form-control">
+          <input type="text" name="titulo" placeholder="Titulo" class="form-control">
           <br />
           <label>Descrição</label>
-          <textarea placeholder="Escreva sua pergunta aqui" class="form-control"></textarea>
+          <textarea name="descricao" placeholder="Escreva sua pergunta aqui" class="form-control"></textarea>
           <br/>
-          <button class="btn btn-primary">Perguntar</button>
+          <button class="btn btn-success">Perguntar</button>
         </form>
       </div>
     </div>
   </div>
-
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="/js/bootstrap.min.css"></script>
-</html>
+<%- include ('partials/footer.ejs') %>
