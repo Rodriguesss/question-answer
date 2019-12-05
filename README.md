@@ -41,4 +41,7 @@ Com o terminal na pasta 'question-answer' e use o comando a baixo:
 nodemon index.js
 ```
 
+### Configurando o Banco de Dados
+Dentro da pasta database no arquivo database.js insira o nome do seu banco de dados, do user e senha.
+
 
