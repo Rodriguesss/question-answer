@@ -2,7 +2,29 @@
 <body>
   <%- include ('partials/navbar') %>
   <div  class="container">
-
+    <hr>
+    <h1><%= pergunta.titulo %></h1>
+    <p><%= pergunta.descricao%></p>
+    <hr>
+    <form method="POST" action="/salvarResposta">
+      <h3>Responda</h3>
+      <label>Resposta:</label>
+      <textarea placeholder="Digite sua resposta" class="form-control" name="corpo"></textarea>
+      <br/>
+      <input type="hidden" name="perguntaId" value="<%= pergunta.id %>" />
+      <button type="submit" class="btn btn-success">Responder</button>
+    </form>
+    <hr>
+    <h3>Respostas</h3>
+    <hr>
+    <% respostas.forEach(resposta => { %>
+      <div class="card">
+        <div class="card-body">
+          <p><%= resposta.corpo %></p>
+        </div>
+      </div>
+      <br/>
+    <% }) %>
   </div>
 </body>
 <%- include ('partials/footer.ejs') %>

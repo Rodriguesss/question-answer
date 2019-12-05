@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const connection = require('./database/database');
 const Pergunta = require('./database/Pergunta');
+const Resposta = require('./database/Resposta');
 
 connection
   .authenticate()
@@ -40,16 +41,16 @@ app.post("/salvarPergunta", (req, res) =>{
   var titulo = req.body.titulo;
   var descricao = req.body.descricao;
 
-  if(titulo == null || descricao == null){
+  if(titulo == undefined || descricao == undefined){
     res.redirect('/');
+  }else{
+    Pergunta.create({
+      titulo: titulo,
+      descricao: descricao
+    }).then(() => {
+      res.redirect('/');
+    });
   }
-
-  Pergunta.create({
-    titulo: titulo,
-    descricao: descricao
-  }).then(() => {
-    res.redirect('/');
-  });
 });
 
 app.get('/pergunta/:id', (req, res) => {
@@ -58,10 +59,33 @@ app.get('/pergunta/:id', (req, res) => {
     where: {id: id}
   }).then(pergunta => {
     if(pergunta != undefined){
-      res.render('pergunta');
+
+      Resposta.findAll({
+        where: { perguntaId: pergunta.id},
+        order: [
+          ['id', 'desc']
+        ]
+      }).then(respostas =>{
+        res.render('pergunta', {
+          pergunta: pergunta,
+          respostas: respostas
+        })
+      })
     }else{
       res.redirect('/');
     }
+  });
+});
+
+app.post('/salvarResposta', (req, res) => {
+  var corpo = req.body.corpo;
+  var perguntaId = req.body.perguntaId;
+
+  Resposta.create({
+    corpo: corpo,
+    perguntaId: perguntaId
+  }).then(() => {
+    res.redirect('/pergunta/'+perguntaId)
   });
 });
 
